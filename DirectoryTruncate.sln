@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryTruncate", "DirectoryTruncate.csproj", "{086E210A-8FBC-49C0-8611-238B60BDBD29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086E210A-8FBC-49C0-8611-238B60BDBD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086E210A-8FBC-49C0-8611-238B60BDBD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086E210A-8FBC-49C0-8611-238B60BDBD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086E210A-8FBC-49C0-8611-238B60BDBD29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE9FBB7C-2FA4-43AF-82C8-FFFDACB65474}
+	EndGlobalSection
+EndGlobal
