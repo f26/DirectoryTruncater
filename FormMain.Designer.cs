@@ -104,7 +104,7 @@
          label1.Name = "label1";
          label1.Size = new Size(172, 23);
          label1.TabIndex = 6;
-         label1.Text = "Only filesnames containing:";
+         label1.Text = "Only filenames containing:";
          label1.TextAlign = ContentAlignment.MiddleRight;
          // 
          // FormMain
