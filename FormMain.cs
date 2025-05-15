@@ -23,30 +23,26 @@ namespace DirectoryTruncate
             var files = Directory.EnumerateFiles(directoryPath, "*", SearchOption.AllDirectories);
 
             progressBar1.Minimum = 0;
-            int count = progressBar1.Maximum = files.Count();
+            int count = 0;
+            progressBar1.Maximum = files.Count();
             string filter = this.textBoxFilter.Text;
 
             foreach (var file in files)
             {
                try
                {
-                  if (filter != "" && !file.Contains(filter))
-                     continue;
-
-                  using (var fs = new FileStream(file, FileMode.Truncate))
-                  {
-                     // Truncates the file to zero length.
-                  }
-
-
                   progressBar1.Value += 1;
                   toolStripStatusLabel1.Text = file.Replace(directoryPath, "");
-                  if (progressBar1.Value % 100 == 0)
+                  if (progressBar1.Value % 25 == 0)
                   {
                      Application.DoEvents();
                   }
 
+                  if (filter != "" && !file.Contains(filter))
+                     continue;
 
+                  // Truncates the file to zero length
+                  using (var fs = new FileStream(file, FileMode.Truncate)) ++count;
                }
                catch (Exception ex)
                {
@@ -55,7 +51,7 @@ namespace DirectoryTruncate
                }
             }
 
-            msg = $"All {count} files have been truncated to zero bytes";
+            msg = $"{count} files have been truncated to zero bytes";
          }
          catch (Exception ex)
          {
