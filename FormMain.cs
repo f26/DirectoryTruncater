@@ -24,18 +24,28 @@ namespace DirectoryTruncate
 
             progressBar1.Minimum = 0;
             int count = progressBar1.Maximum = files.Count();
+            string filter = this.textBoxFilter.Text;
 
             foreach (var file in files)
             {
                try
                {
+                  if (filter != "" && !file.Contains(filter))
+                     continue;
+
                   using (var fs = new FileStream(file, FileMode.Truncate))
                   {
                      // Truncates the file to zero length.
                   }
+
+
                   progressBar1.Value += 1;
                   toolStripStatusLabel1.Text = file.Replace(directoryPath, "");
-                  Application.DoEvents();
+                  if (progressBar1.Value % 100 == 0)
+                  {
+                     Application.DoEvents();
+                  }
+
 
                }
                catch (Exception ex)

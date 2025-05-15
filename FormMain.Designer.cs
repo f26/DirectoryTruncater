@@ -35,6 +35,8 @@
          progressBar1 = new ProgressBar();
          statusStrip1 = new StatusStrip();
          toolStripStatusLabel1 = new ToolStripStatusLabel();
+         textBoxFilter = new TextBox();
+         label1 = new Label();
          statusStrip1.SuspendLayout();
          SuspendLayout();
          // 
@@ -47,7 +49,7 @@
          // 
          // buttonTruncateFiles
          // 
-         buttonTruncateFiles.Location = new Point(432, 40);
+         buttonTruncateFiles.Location = new Point(432, 72);
          buttonTruncateFiles.Name = "buttonTruncateFiles";
          buttonTruncateFiles.Size = new Size(75, 23);
          buttonTruncateFiles.TabIndex = 1;
@@ -67,7 +69,7 @@
          // 
          // progressBar1
          // 
-         progressBar1.Location = new Point(8, 40);
+         progressBar1.Location = new Point(8, 72);
          progressBar1.Name = "progressBar1";
          progressBar1.Size = new Size(416, 23);
          progressBar1.Style = ProgressBarStyle.Continuous;
@@ -76,7 +78,7 @@
          // statusStrip1
          // 
          statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-         statusStrip1.Location = new Point(0, 66);
+         statusStrip1.Location = new Point(0, 103);
          statusStrip1.Name = "statusStrip1";
          statusStrip1.Size = new Size(521, 22);
          statusStrip1.TabIndex = 4;
@@ -89,11 +91,29 @@
          toolStripStatusLabel1.Size = new Size(38, 17);
          toolStripStatusLabel1.Text = "Ready";
          // 
+         // textBoxFilter
+         // 
+         textBoxFilter.Location = new Point(184, 40);
+         textBoxFilter.Name = "textBoxFilter";
+         textBoxFilter.Size = new Size(320, 23);
+         textBoxFilter.TabIndex = 5;
+         // 
+         // label1
+         // 
+         label1.Location = new Point(8, 40);
+         label1.Name = "label1";
+         label1.Size = new Size(172, 23);
+         label1.TabIndex = 6;
+         label1.Text = "Only filesnames containing:";
+         label1.TextAlign = ContentAlignment.MiddleRight;
+         // 
          // FormMain
          // 
          AutoScaleDimensions = new SizeF(7F, 15F);
          AutoScaleMode = AutoScaleMode.Font;
-         ClientSize = new Size(521, 88);
+         ClientSize = new Size(521, 125);
+         Controls.Add(label1);
+         Controls.Add(textBoxFilter);
          Controls.Add(statusStrip1);
          Controls.Add(progressBar1);
          Controls.Add(buttonBrowse);
@@ -116,5 +136,7 @@
       private ProgressBar progressBar1;
       private StatusStrip statusStrip1;
       private ToolStripStatusLabel toolStripStatusLabel1;
+      private TextBox textBoxFilter;
+      private Label label1;
    }
 }
